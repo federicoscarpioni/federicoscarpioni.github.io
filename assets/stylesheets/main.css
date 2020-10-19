@@ -426,3 +426,21 @@ footer{
   border-radius: 50%;
   height: 100%;
 }
+
+/*
+  ========================================
+  Coming SOON section
+  ========================================
+*/
+.soon-msg{
+  height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.soon-msg p{
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
