@@ -1,3 +1,81 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://federicoscarpioni.github.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Federico Scarpioni Website'
+theme = 'typo'
+
+# Google analytics code
+#googleAnalytics = "G-xxxxxxxxx"
+
+[taxonomies]
+tag = 'tags'
+
+[params]
+# Meta description
+description = "A personal blog"
+
+# Appearance settings
+theme = 'auto'
+colorPalette = 'default'
+hideHeader = false
+
+# Intro on main page, content is markdown
+homeIntroTitle = 'Federico Scaprioni!'
+homeIntroContent = """
+PhD in applied electrochemsitry. I am developing the method to measure and analyse batteries impedance in non-stationary conditions.
+"""
+
+# Collection to display on home
+homeCollectionTitle = 'Posts'
+homeCollection = 'posts'
+
+# Lists parameters
+paginationSize = 100
+listSummaries = true
+listDateFormat = '2 Jan 2006'
+
+# Breadcrumbs
+[params.breadcrumbs]
+enabled = true
+showCurrentPage = true
+home = "Home"
+
+# Social icons
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/federicoscarpioni/"
+
+#[[params.social]]
+#name = "medium"
+#url = "https://medium.com/@user"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/federicoscarpioni"
+
+# Main menu pages
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "posts"
+url = "/posts"
+
+[[params.menu]]
+name = "about"
+url = "/about"
+
+# Syntax highlight on code blocks
+[markup]
+[markup.highlight]
+style = 'algol'
+
+# Giscus comments
+[params.giscus]
+enable = false
+repo = "user/repo"
+repoid = "repoId"
+category = "General"
+categoryid = "categoryId"
+mapping = "pathname"
+theme = "preferred_color_scheme"
