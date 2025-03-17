@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Federico Scarpioni Website</title>
+    <link>https://federicoscarpioni.github.io/</link>
+    <description>Recent content in Home on Federico Scarpioni Website</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Mar 2025 22:24:54 +0100</lastBuildDate>
+    <atom:link href="https://federicoscarpioni.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First Post</title>
+      <link>https://federicoscarpioni.github.io/posts/first-post/</link>
+      <pubDate>Mon, 17 Mar 2025 22:24:54 +0100</pubDate>
+      <guid>https://federicoscarpioni.github.io/posts/first-post/</guid>
+      <description>&lt;p&gt;This is mu first post!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
