@@ -1,7 +1,7 @@
 baseURL = 'https://federicoscarpioni.github.io/'
 languageCode = 'en-us'
 title = 'Federico Scarpioni Website'
-theme = 'typo'
+theme = 'rusty-typewriter'
 
 # Google analytics code
 #googleAnalytics = "G-xxxxxxxxx"
