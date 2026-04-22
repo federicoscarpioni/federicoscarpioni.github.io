@@ -1,19 +1,63 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on Federico Scarpioni Website</title>
-    <link>https://federicoscarpioni.github.io/</link>
-    <description>Recent content in Home on Federico Scarpioni Website</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 17 Mar 2025 22:24:54 +0100</lastBuildDate>
-    <atom:link href="https://federicoscarpioni.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <title>Federico Scarpioni</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Federico Scarpioni</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Federico Scarpioni</copyright>
+    <lastBuildDate>Wed, 22 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
-      <title>First Post</title>
-      <link>https://federicoscarpioni.github.io/posts/first-post/</link>
-      <pubDate>Mon, 17 Mar 2025 22:24:54 +0100</pubDate>
-      <guid>https://federicoscarpioni.github.io/posts/first-post/</guid>
-      <description>&lt;p&gt;This is mu first post!&lt;/p&gt;</description>
+      <title>Hello, world</title>
+      <link>http://localhost:1313/personal/hello-world/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/personal/hello-world/</guid>
+      <description>Kickoff post for the personal section.</description>
+      
     </item>
+    
+    <item>
+      <title>Welcome to my research notebook</title>
+      <link>http://localhost:1313/professional/welcome-to-my-research-notebook/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/professional/welcome-to-my-research-notebook/</guid>
+      <description>Why I started writing notes in public, and what you can expect to find here.</description>
+      
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/about/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/contact/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Curriculum Vitae</title>
+      <link>http://localhost:1313/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/cv/</guid>
+      <description></description>
+      
+    </item>
+    
   </channel>
 </rss>

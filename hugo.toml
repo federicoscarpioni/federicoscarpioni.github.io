@@ -1,81 +1,195 @@
-baseURL = 'https://federicoscarpioni.github.io/'
-languageCode = 'en-us'
-title = 'Federico Scarpioni'
-theme = 'rusty-typewriter'
+# =====================================================================
+# Hugo site configuration – Federico Scarpioni personal blog
+# Theme: Blowfish (https://blowfish.page)
+# Single-file config on purpose: easier to edit for non-experts.
+# =====================================================================
 
-# Google analytics code
-#googleAnalytics = "G-xxxxxxxxx"
+baseURL        = "https://federicoscarpioni.github.io/"
+languageCode   = "en"
+title          = "Federico Scarpioni"
+theme          = "blowfish"
+defaultContentLanguage = "en"
 
+enableRobotsTXT   = true
+enableEmoji       = true
+paginate          = 10
+summaryLength     = 0
+
+# Google Analytics (leave blank to disable)
+# googleAnalytics = "G-XXXXXXXXXX"
+
+# ---------------------------------------------------------------------
+# Taxonomies – tags are shared across professional and personal posts.
+# ---------------------------------------------------------------------
 [taxonomies]
-tag = 'tags'
+  tag      = "tags"
+  category = "categories"
 
-[params]
-# Meta description
-description = "A personal blog"
-
-# Appearance settings
-theme = 'auto'
-colorPalette = 'default'
-hideHeader = false
-
-# Intro on main page, content is markdown
-homeIntroTitle = 'Federico Scaprioni!'
-homeIntroContent = """
-PhD in applied electrochemsitry. I am developing the method to measure and analyse batteries impedance in non-stationary conditions.
-"""
-
-# Collection to display on home
-homeCollectionTitle = 'Posts'
-homeCollection = 'posts'
-
-# Lists parameters
-paginationSize = 100
-listSummaries = true
-listDateFormat = '2 Jan 2006'
-
-# Breadcrumbs
-[params.breadcrumbs]
-enabled = true
-showCurrentPage = true
-home = "Home"
-
-# Social icons
-[[params.social]]
-name = "linkedin"
-url = "https://www.linkedin.com/in/federicoscarpioni/"
-
-#[[params.social]]
-#name = "medium"
-#url = "https://medium.com/@user"
-
-[[params.social]]
-name = "github"
-url = "https://github.com/federicoscarpioni"
-
-# Main menu pages
-[[params.menu]]
-name = "home"
-url = "/"
-
-[[params.menu]]
-name = "posts"
-url = "/posts"
-
-[[params.menu]]
-name = "about"
-url = "/about"
-
-# Syntax highlight on code blocks
+# ---------------------------------------------------------------------
+# Markdown + code highlighting + table of contents depth
+# ---------------------------------------------------------------------
 [markup]
-[markup.highlight]
-style = 'algol'
+  [markup.goldmark.renderer]
+    unsafe = true          # allow raw HTML in markdown (needed for CV page)
+  [markup.highlight]
+    noClasses  = false
+    codeFences = true
+    lineNos    = false
+    style      = "github"
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel   = 4
+    ordered    = false
 
-# Giscus comments
+[outputs]
+  home = ["HTML", "RSS", "JSON"]  # JSON needed for the built-in search
+
+# =====================================================================
+# Blowfish theme parameters
+# Full reference: https://blowfish.page/docs/configuration/
+# =====================================================================
+[params]
+  description          = "Personal site and writing of Federico Scarpioni – electrochemistry, batteries, and things I think about."
+  colorScheme          = "blowfish"     # try: avocado, fire, ocean, forest, slate
+  defaultAppearance    = "auto"         # "light" | "dark" | "auto"
+  autoSwitchAppearance = true
+  enableSearch         = true
+  enableCodeCopy       = true
+
+  # The sections whose posts appear in the homepage "Recent" list
+  # and in the global RSS feed.
+  mainSections = ["professional", "personal"]
+
+  disableImageOptimization     = false
+  disableTextInHeader          = false
+  defaultBackgroundImage       = ""
+  defaultFeaturedImage         = ""
+
+# -- Header --
+[params.header]
+  layout = "basic"
+
+# -- Footer --
+[params.footer]
+  showMenu               = true
+  showCopyright          = true
+  showThemeAttribution   = true
+  showAppearanceSwitcher = true
+  showScrollToTop        = true
+
+# -- Home page --
+# "profile" layout = avatar + bio + social links + list of recent posts.
+[params.homepage]
+  layout            = "profile"
+  homepageImage     = ""                # e.g. "img/avatar.jpg" in /assets or /static
+  showRecent        = true
+  showRecentItems   = 5
+  showMoreLink      = true
+  showMoreLinkDest  = "/professional/"
+  cardView          = true
+  cardViewScreenWidth = false
+  layoutBackgroundBlur = false
+
+# -- Article page (individual post) --
+# This is where the always-visible sidebar TOC lives.
+[params.article]
+  showDate             = true
+  showDateUpdated      = false
+  showAuthor           = true
+  showBreadcrumbs      = true
+  showDraftLabel       = true
+  showEdit             = false
+  showHeadingAnchors   = true
+  showPagination       = true
+  invertPagination     = false
+  showReadingTime      = true
+  showTableOfContents  = true     # <-- sidebar TOC (key requirement)
+  showTaxonomies       = true
+  showWordCount        = false
+  showComments         = false
+  sharingLinks         = ["linkedin", "email"]
+  showRelatedContent   = true
+  relatedContentLimit  = 3
+  showZenMode          = false
+
+# -- List pages (section indexes, e.g. /professional/) --
+[params.list]
+  showBreadcrumbs      = false
+  showSummary          = true
+  showTableOfContents  = false
+  showCards            = true
+  groupByYear          = false
+  cardView             = true
+  cardViewScreenWidth  = false
+  constrainItemsWidth  = false
+
+# -- Taxonomy pages (e.g. /tags/) --
+[params.taxonomy]
+  showTermCount = true
+
+# -- Term pages (e.g. /tags/batteries/) --
+[params.term]
+  showBreadcrumbs     = true
+  showSummary         = false
+  showTableOfContents = false
+  groupByYear         = true
+  cardView            = false
+
+# =====================================================================
+# Author block (shown in the profile layout on the homepage)
+# =====================================================================
+[params.author]
+  name     = "Federico Scarpioni"
+  image    = ""         # put a photo at assets/img/avatar.jpg and set "img/avatar.jpg"
+  headline = "PhD in applied electrochemistry"
+  bio      = "I develop methods to measure and analyse battery impedance in non-stationary conditions. I also write about hobby projects on the side."
+  links = [
+    { email    = "mailto:federicoscarpioni@gmail.com" },
+    { linkedin = "https://www.linkedin.com/in/federicoscarpioni/" },
+    { github   = "https://github.com/federicoscarpioni" },
+  ]
+
+# =====================================================================
+# Main navigation menu (top bar)
+# =====================================================================
+[[menu.main]]
+  name    = "Professional"
+  pageRef = "professional"
+  weight  = 10
+
+[[menu.main]]
+  name    = "Personal"
+  pageRef = "personal"
+  weight  = 20
+
+[[menu.main]]
+  name    = "Hub"
+  pageRef = "hub"
+  weight  = 30
+
+[[menu.main]]
+  name    = "Tags"
+  pageRef = "tags"
+  weight  = 40
+
+[[menu.main]]
+  name    = "CV"
+  pageRef = "cv"
+  weight  = 50
+
+[[menu.main]]
+  name    = "About"
+  pageRef = "about"
+  weight  = 60
+
+# =====================================================================
+# Optional: comments via giscus (leave enabled=false for now)
+# =====================================================================
 [params.giscus]
-enable = false
-repo = "user/repo"
-repoid = "repoId"
-category = "General"
-categoryid = "categoryId"
-mapping = "pathname"
-theme = "preferred_color_scheme"
+  enable       = false
+  repo         = "federicoscarpioni/personal-blog"
+  repoid       = ""
+  category     = "General"
+  categoryid   = ""
+  mapping      = "pathname"
+  theme        = "preferred_color_scheme"
