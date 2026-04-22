@@ -12,8 +12,10 @@ defaultContentLanguage = "en"
 
 enableRobotsTXT   = true
 enableEmoji       = true
-paginate          = 10
 summaryLength     = 0
+
+[pagination]
+  pagerSize = 10
 
 # Google Analytics (leave blank to disable)
 # googleAnalytics = "G-XXXXXXXXXX"
