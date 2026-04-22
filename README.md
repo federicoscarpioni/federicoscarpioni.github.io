@@ -6,57 +6,6 @@ Auto-deploys to GitHub Pages on every push to `main` (see `.github/workflows/gh-
 
 ---
 
-## One-time setup (run these on your Mac, once)
-
-These commands finish the migration from the old themes and install Blowfish. Run them in this order from the repo root (`~/Codes/Hugo/personal-blog`). They assume you already have `git` and will install `hugo` with Homebrew.
-
-```bash
-# 0. Make sure Hugo is installed (extended build is required by Blowfish)
-brew install hugo
-
-# 1. Remove the two old theme submodules
-git submodule deinit -f themes/typo || true
-git rm -rf themes/typo || true
-rm -rf .git/modules/themes/typo
-
-git submodule deinit -f themes/rusty-typewriter || true
-git rm -rf themes/rusty-typewriter || true
-rm -rf .git/modules/themes/rusty-typewriter
-
-# 2. Remove build output and stale tracked files
-git rm -r --cached public/ 2>/dev/null || true
-rm -rf public/
-git rm -f index.html 2>/dev/null || true       # empty leftover file
-git rm -rf posts/ 2>/dev/null || true          # old content, migrated to content/
-git rm -f .hugo_build.lock 2>/dev/null || true
-
-# Get rid of any .DS_Store that snuck into git
-git rm --cached -f .DS_Store '**/.DS_Store' 2>/dev/null || true
-find . -name .DS_Store -not -path './.git/*' -delete
-
-# The scratch folder the previous setup left behind
-rm -rf "untitled folder"
-rm -f _write_test.tmp
-rmdir config/_default 2>/dev/null || true      # this dir is unused
-
-# 3. Add Blowfish as a submodule, pinned to the `main` branch
-git submodule add -b main https://github.com/nunocoracao/blowfish.git themes/blowfish
-git submodule update --init --recursive
-
-# 4. Preview the site locally
-hugo server --buildDrafts
-# open http://localhost:1313 in your browser; Ctrl-C to stop
-
-# 5. When it looks right:
-git add -A
-git commit -m "Switch to Blowfish theme and restructure content"
-git push origin main
-```
-
-GitHub Actions will then build and deploy in ~1 minute. Check the Actions tab on GitHub for progress.
-
----
-
 ## Day-to-day: adding a post
 
 Two sections: `professional` and `personal`. Hugo has archetypes wired up so `hugo new` creates the right front matter automatically.
@@ -148,6 +97,8 @@ git push
 ```
 
 Read the [Blowfish release notes](https://github.com/nunocoracao/blowfish/releases) first — occasionally a bump requires a tiny config tweak.
+
+If Blowfish bumps its minimum Hugo version, you'll see "Module 'blowfish' is not compatible with this Hugo version" in your next CI run. The fix is to bump `HUGO_VERSION` in `.github/workflows/gh-pages.yaml` so it matches what you're using locally (`hugo version`).
 
 ---
 
