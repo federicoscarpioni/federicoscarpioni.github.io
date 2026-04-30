@@ -8,17 +8,13 @@ Auto-deploys to GitHub Pages on every push to `main` (see `.github/workflows/gh-
 
 ## Day-to-day: adding a post
 
-Two sections: `professional` and `personal`. Hugo has archetypes wired up so `hugo new` creates the right front matter automatically.
+Everything lives in one section: `articles`. Hugo has an archetype wired up so `hugo new` creates the right front matter automatically.
 
 ```bash
-# new professional post
-hugo new professional/eis-under-load-part-1.md
-
-# new personal post
-hugo new personal/reading-on-control-theory.md
+hugo new articles/eis-under-load-part-1.md
 ```
 
-Open the file Hugo just created, edit the body, tweak the `tags:` list, set `draft: false` when you're ready, then:
+Open the file Hugo just created, write the body, tweak the `tags:` list, set `draft: false` when ready, then:
 
 ```bash
 hugo server --buildDrafts   # preview (shows drafts)
@@ -28,26 +24,20 @@ git add -A && git commit -m "post: eis under load, part 1" && git push
 
 ### Slugs and filenames
 
-Use lowercase-with-hyphens for filenames: `content/professional/ac-coupling-tricks.md`. That becomes `/professional/ac-coupling-tricks/` on the live site.
+Use lowercase-with-hyphens for filenames: `content/articles/ac-coupling-tricks.md` becomes `/articles/ac-coupling-tricks/` on the live site.
 
 ### Tags
 
-Tags are free-form, shared across both sections. Keep the vocabulary small and consistent — it's fine to introduce a new tag, but try not to coin synonyms (pick `batteries` or `battery`, not both). Think of tags in three flavours:
+Tags are how the site organises posts (since there's only one section). Keep the vocabulary small and consistent — it's fine to introduce a new tag, but don't coin synonyms (pick `batteries` or `battery`, not both). Two flavours of tag:
 
 - **Topic tags**: `batteries`, `impedance`, `eis`, `control-theory`, `python`.
-- **Type tags**: `methodology`, `paper-notes`, `experiment`, `tool-pick`, `book-notes`.
-- **Curation tag**: `hub` — see below.
+- **Type tags**: `methodology`, `paper-notes`, `experiment`, `tool-pick`, `book-notes`, `meta`.
 
-Tag pages live at `/tags/<name>/` automatically. The global list is at `/tags/`.
+Tag pages live at `/tags/<name>/` automatically (e.g. `/tags/methodology/`). The global tag index is at `/tags/`. The "Browse by topic" block in `content/articles/_index.md` links to a few featured ones — update that list as your tag vocabulary settles.
 
-### The hub
+### Curated reading list (the "hub")
 
-The hub is a hand-curated reading list, not a chronological feed. To promote a post to the hub:
-
-1. Add `hub` to that post's `tags:` list in the front matter.
-2. Add a link to it from `content/hub/_index.md`, with a one-line explanation of why it's there.
-
-Both steps matter. Step 1 makes it appear at `/tags/hub/` (a second view sorted by date). Step 2 is the *curated* ordering and commentary that makes the hub worth keeping.
+The Articles index page (`content/articles/_index.md`) has a "Start here" block at the top that's a hand-picked reading list — the posts you'd point someone at first. To promote a post to that list, just add a link to it under "Start here" with a one-line explanation. There's no special tag or magic; it's curated by hand on purpose.
 
 ---
 
@@ -114,7 +104,7 @@ If a build fails, check the "Actions" tab on GitHub — the error is almost alwa
 
 **The TOC sidebar isn't showing up.** Blowfish only renders the sidebar TOC on screens wide enough for it (roughly ≥1280px). On narrower screens the TOC collapses into the top of the article. If you don't see it on a wide screen, check that the post has at least two headings at level 2 or below — a single H2 isn't enough to build a TOC.
 
-**A post isn't appearing on the homepage.** The homepage lists posts from `mainSections` only (`professional`, `personal`). If you put a post outside those sections, it won't show up. Also: `draft: true` posts are skipped unless you run `hugo server --buildDrafts`.
+**A post isn't appearing on the homepage.** The homepage lists posts from `mainSections` only (`articles`). If you put a markdown file directly in `content/` instead of `content/articles/`, it won't show up. Also: `draft: true` posts are skipped unless you run `hugo server --buildDrafts`.
 
 **"Error: module blowfish not found".** The submodule isn't initialised. From the repo root: `git submodule update --init --recursive`.
 

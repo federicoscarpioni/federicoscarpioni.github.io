@@ -11,20 +11,20 @@
     
     <item>
       <title>Hello, world</title>
-      <link>http://localhost:1313/personal/hello-world/</link>
+      <link>http://localhost:1313/articles/hello-world/</link>
       <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/personal/hello-world/</guid>
-      <description>Kickoff post for the personal section.</description>
+      <guid>http://localhost:1313/articles/hello-world/</guid>
+      <description>Kickoff post — short, low-stakes, just to break the seal.</description>
       
     </item>
     
     <item>
       <title>Welcome to my research notebook</title>
-      <link>http://localhost:1313/professional/welcome-to-my-research-notebook/</link>
+      <link>http://localhost:1313/articles/welcome-to-my-research-notebook/</link>
       <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/professional/welcome-to-my-research-notebook/</guid>
+      <guid>http://localhost:1313/articles/welcome-to-my-research-notebook/</guid>
       <description>Why I started writing notes in public, and what you can expect to find here.</description>
       
     </item>

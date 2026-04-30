@@ -60,7 +60,7 @@ summaryLength     = 0
 
   # The sections whose posts appear in the homepage "Recent" list
   # and in the global RSS feed.
-  mainSections = ["professional", "personal"]
+  mainSections = ["articles"]
 
   disableImageOptimization     = false
   disableTextInHeader          = false
@@ -87,7 +87,7 @@ summaryLength     = 0
   showRecent        = true
   showRecentItems   = 5
   showMoreLink      = true
-  showMoreLinkDest  = "/professional/"
+  showMoreLinkDest  = "/articles/"
   cardView          = true
   cardViewScreenWidth = false
   layoutBackgroundBlur = false
@@ -155,34 +155,19 @@ summaryLength     = 0
 # Main navigation menu (top bar)
 # =====================================================================
 [[menu.main]]
-  name    = "Professional"
-  pageRef = "professional"
+  name    = "Articles"
+  pageRef = "articles"
   weight  = 10
-
-[[menu.main]]
-  name    = "Personal"
-  pageRef = "personal"
-  weight  = 20
-
-[[menu.main]]
-  name    = "Hub"
-  pageRef = "hub"
-  weight  = 30
-
-[[menu.main]]
-  name    = "Tags"
-  pageRef = "tags"
-  weight  = 40
 
 [[menu.main]]
   name    = "CV"
   pageRef = "cv"
-  weight  = 50
+  weight  = 20
 
 [[menu.main]]
   name    = "About"
   pageRef = "about"
-  weight  = 60
+  weight  = 30
 
 # =====================================================================
 # Optional: comments via giscus (leave enabled=false for now)

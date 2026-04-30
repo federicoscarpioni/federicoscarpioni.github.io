@@ -3,4 +3,4 @@ title: "Federico Scarpioni"
 description: "Research notes and side projects."
 ---
 
-Welcome. This is where I keep my writing: [professional notes](/professional/) from my research on battery impedance, and [hobby pieces](/personal/) on things I find interesting. If you want a curated starting point, try the [hub](/hub/).
+Welcome. This is where I keep my writing — research notes on battery impedance, side projects, and the occasional hobby piece. The [Articles](/articles/) page has a curated starting list and a topic browser.

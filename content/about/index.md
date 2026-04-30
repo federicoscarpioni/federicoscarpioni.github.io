@@ -10,9 +10,7 @@ showBreadcrumbs: false
 
 I'm Federico Scarpioni. I did my PhD in applied electrochemistry and I work on methods to measure and analyse battery impedance in non-stationary conditions — essentially, trying to get honest readings out of cells while they're actually doing something, rather than only at rest.
 
-This site is part research notebook, part hobby blog. The [professional](/professional/) section is where I write things I'd want a colleague or collaborator to read: methodology notes, paper summaries, experiment write-ups, tool choices. The [personal](/personal/) section is for everything else — side projects, books, things I'm learning, occasional rants.
-
-If you want to jump to specific topics, the [tags](/tags/) page groups everything, and the [hub](/hub/) is a short curated tour of posts I'd point someone at first.
+This site is part research notebook, part hobby blog. Methodology notes, paper summaries, experiment write-ups, tool choices, side projects — it all lives in one place under [Articles](/articles/). The articles index has a short curated reading list at the top and a topic browser; the [tags](/tags/) page groups everything by subject.
 
 ## Get in touch
 
