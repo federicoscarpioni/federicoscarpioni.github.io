@@ -1,4 +1,4 @@
 ---
 title: "Federico Scarpioni"
-description: "Bettery engineer specialized in operando impedance spectroscopy"
+description: "Battery engineer specialized in operando impedance spectroscopy"
 ---
